@@ -28,7 +28,7 @@
           });
         if (exports.debug) console.log("Sources: " + elem.sources);
         // Load first source
-        elem.src = elem.sources[0];
+        elem.src = elem.sources[0].replace("http", "https");
         // Play first source
         if (elem.getAttribute("autoplay")) elem.play();
       }
