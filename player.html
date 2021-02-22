@@ -1,23 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html class="no-js">
 
 <head>
     <meta charset="utf-8">
-    <title>Player test m3u</title>
+    <title>Player audio</title>
+    <meta name="description" content="">
+    <style>
+        /* Responsive video */
+        
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        /* faimaison style */
+        
+        body {
+            background: #37455b;
+            color: #cedbf0;
+        }
+        
+        h1,
+        a {
+            color: #b4d931;
+        }
+        
+        video {
+            border: 1px solid #485a74;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Player</h1>
-    <audio controls>
-         <source src="http://123beloteclub.com:8000/test.mp3.m3u" type="audio/mpegURL">
-    </audio>
 
+    <h1>Player m3u </h1>
+    <video id="video" controls loop autoplay width="640" data-playlist="http://123beloteclub.com:8000/test.mp3.m3u"></video>
+
+    <script src="m3uStreamPlayer.js"></script>
     <script>
-        var supportsMp3 = false;
-        var myAudio = document.createElement('audio');
-        if (myAudio.canPlayType('audio/mpeg') !== "") {
-            supportsMp3 = true;
-        }
+        m3uStreamPlayer.init({
+            selector: '#video',
+            debug: true
+        });
     </script>
+
 </body>
 
 </html>
