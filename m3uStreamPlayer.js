@@ -20,7 +20,6 @@
     xhr.send();
     function process() {
       if (xhr.readyState == 4) {
-        // m3uToUrl From https://github.com/aitorciki/jquery-playlist/blob/master/jquery.playlist.js
         elem.sources = xhr.responseText
           .match(/^(?!#)(?!\s).*$/gm)
           .filter(function (element) {
@@ -45,7 +44,6 @@
     xhr.send();
     function process() {
       if (xhr.readyState == 4) {
-        // m3uToUrl From https://github.com/aitorciki/jquery-playlist/blob/master/jquery.playlist.js
         elem.sources = xhr.responseText
           .match(/^(?!#)(?!\s).*$/gm)
           .filter(function (element) {
