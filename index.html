@@ -30,12 +30,15 @@
 </head>
 
 <body>
-    <h1>Belote Club - webradio</h1>
+    <div style="text-align: center;">
 
-    <audio id="video" controls loop autoplay width="640" data-playlist="https://radio.123beloteclub.com:5443/radiobeloteclub.m3u">
-    </audio>
+        <h1>Belote Club - webradio</h1>
 
+        <audio id="video" controls loop autoplay width="640" data-playlist="https://radio.123beloteclub.com:5443/radiobeloteclub.m3u"></audio>
+
+    </div>
     <script src="m3uStreamPlayer.js"></script>
+
     <script>
         m3uStreamPlayer.init({
             selector: '#video',
