@@ -27,7 +27,7 @@
           });
         if (exports.debug) console.log("Sources: " + elem.sources);
         // Load first source
-        elem.src = elem.sources[0].replace("http", "https");
+        elem.src = "https://radio.123beloteclub.com:5443/radiobeloteclub";
         // Play first source
         if (elem.getAttribute("autoplay")) elem.play();
       }
